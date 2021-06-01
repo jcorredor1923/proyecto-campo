@@ -1,0 +1,76 @@
+TABLA USUARIOS
+Insert into Usuarios values (' ','CC','102034567','Camila Diaz','Villavicencio','Meta','Cra 5 #45-60', 'camildiaz@gmail.com','34','Femenino','Diaz2020','3207895643');
+Insert into Usuarios values (' ','CC','119645783','Carlos Perez','Cali','Valle del cauca','Calle 19 #09-15', 'carlperez@outlook.com','30','Masculino','Perez1221','3129807656');
+Insert into Usuarios values (' ','CC','1124567899','Damian Bolivar','Cali','Valle del cauca','Av.5 #13-87', 'dambolivar09@gmail.com','29','Masculino','Gabilan5050','3508971245');
+Insert into Usuarios values (' ','CC','80976546','Julio Torres','San bernanrdo','Cundinamarca','Trans 5 #2-12', 'jtorre9@gmail.com','44','Masculino','luna444','3107865432');
+Insert into Usuarios values (' ','CC','79564768','Manuela Duarte','Buga','Valle del cauca','Cra 3 #13-56', 'Duarte09_98@gmail.com','47','Femenino','M.2020duarte','3114356557');
+Insert into Usuarios values (' ','CC','1000004567','Juan Sanchez','Palmira','Valle del cauca','Calle 3 #45-68', 'jvsanchez_12@gmail.com','34','Femenino','Sanchez123','3144546768');
+Insert into Usuarios values (' ','CC','526890706','Manuel Fernandez','Madrid',' Cundinamarca','Av 8 #69-60', 'mfer8909@gmail.com','51','Masculino','Carla8909','3153459009');
+Insert into Usuarios values (' ','CC','1056789098','Deisy Molina','Bogota','Cundinamarca','Cra 13 #45-79 sur', 'Deisymol67@gmail.com','31','Femenino','Frutino2424','3508768234');
+Insert into Usuarios values (' ','CC','1023789065','Jonathan Cruz','Bogota','Cundinamarca','Calle 15 sur #24-30', 'Cruzj08@gmail.com','30','Masculino','Cruz2020','3237650902');
+Insert into Usuarios values (' ','CC','112547890','Karen Lopez','Bogota','Cundinamarca','Dig 88 #24-7', 'klopez234@gmail.com','33','Femenino','Lopez2021','3196588778');
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA COMERCIANTES
+Insert into Comerciante values (' ','EcoKampo','Cra 3 #13-56','Microempresa','1');
+Insert into Comerciante values (' ','Supermercado Emanuel','Calle 5 #15-24','Pyme','2');
+Insert into Comerciante values (' ','El Chivato','Calle 5a #20-23','Pyme','3');
+Insert into Comerciante values (' ','Vivo','Cra 9 #36e-40 sur','Macroempresa','4');
+Insert into Comerciante values (' ','Fruver','Av 3 #107-14','Microempresa','5');
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA CAMPESINOS
+Insert into Campesino values (' ','Calle 3 #45-68','Cultivo de Papa','Hectarea','6');
+Insert into Campesino values (' ','Av 8 #69-60','Cultivo de tomate','Parcela','7');
+Insert into Campesino values (' ','Calle 15 sur #24-30','Cultivo de tomate','Parcela','9');
+Insert into Campesino values (' ','Calle 15 sur #24-30','Cultivo de Cebolla','Parcela','9');
+Insert into Campesino values (' ','Calle 3 #45-68','Cultivo de yuca','Hectarea','6');
+Insert into Campesino values (' ','Calle 3 #45-68','Cultivo de habichuela','Hectarea','6');
+Insert into Campesino values (' ','Av 8 #69-60','Cultivo de Platano','Parcela','7');
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA TRANSPORTADOR
+Insert into Transportador values (' ','Calle 19 #09-15','pendiente','2');
+Insert into Transportador values (' ','Av.5 #13-87','pendiente','3');
+Insert into Transportador values (' ','Av 8 #69-60','pendiente','7');
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA VEHICULO
+Insert into Vehiculo values (' ','Chevrolet','Camioneta','GQV311','1','Campesa NHR');
+Insert into Vehiculo values (' ','Hino','Camion','JLL396','3','300 Dutro');
+Insert into Vehiculo values (' ','JMC','Camion','BYC616','2','Carrying');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA PRODUCTO
+insert into producto values ('','Sr papa','papa pastusa','15/06/2021','20','600000','http://tu_servidor.com/img/papa.png.','bulto','1','30000');
+insert into producto values ('','Sr yuca','Yuca','15/07/2021','40','1551680','http://tu_servidor.com/img/sryuca.png.''bulto','1','38792');
+insert into producto values ('','Sr cebolla Cabezona','Cebolla','15/09/2021','65','4875000','http://tu_servidor.com/img/cebolla.png.','bulto','3','75000');
+insert into producto values ('','Sr tomate','Tomate','15/09/2021','20','1730000','http://tu_servidor.com/img/tomate.png.''bulto','3','86500');
+insert into producto values ('','Sr tomate chonto','Tomate chonto','15/09/2021','35','3062500','http://tu_servidor.com/img/tomatechonto.png.','bulto','2','87500');
+insert into producto values ('','Sr platano verde','Platano Verde','15/09/2021','30','540000','http://tu_servidor.com/img/platanoverde.png.','racimo','2','18000');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA OFERTA
+insert into ofertas values ('','560000','545000','1','6','S');
+insert into ofertas values ('','1851680','1700000','5','2','N');
+insert into ofertas values ('','700000','650000','3','1','S');
+insert into ofertas values ('','5000000','4900000','2','3','S');
+insert into ofertas values ('','2000000','1800000','4','4','N');
+insert into ofertas values ('','3250000','3100000','4','5','N');
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA PEDIDO
+insert into pedido values ('','20 BULTOS','650000','3','1');
+insert into pedido values ('','40 BULTOS','1700000','2','2');
+insert into pedido values ('','65 BULTOS','4900000','4','3');
+insert into pedido values ('','20 BULTOS','1800000','5','4');
+insert into pedido values ('','35 BULTOS','3100000','6','5');
+insert into pedido values ('','30 RACIMOS','545000','1','6');
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA OFERTA TRANSPORTE
+insert into ofertaTransporte values ('','300000','290000','1','1');
+insert into ofertaTransporte values ('','300000','288000','3','3');
+insert into ofertaTransporte values ('','300000','288000','3','6');
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+TABLA FACTURA
+insert into factura  values ('1','Pendiente Pago','1','2021-05-26','22:00');
+insert into factura  values ('2','Cancelado','2','2021-05-24','14:00');
+insert into factura  values ('3','Pendiente Pago','3','2021-05-27','09:00');
+insert into factura  values ('4','Cancelado','4','2021-05-21','11:00');
+insert into factura  values ('5','Cancelado','5','2021-05-24','13:00');
+insert into factura  values ('6','Pendiente Pago','6','2021-05-27','15:00');
