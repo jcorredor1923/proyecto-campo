@@ -1,0 +1,43 @@
+/*usuario - transportador*/
+select usuarios.idusuarios, usuarios.nombrescompletosUsuarios, usuarios.ciudadUsuarios from usuarios
+inner join transportador on transportador.USUARIOS_idUsuarios = usuarios.idUsuarios;
+
+/*usuario - comerciante*/
+select usuarios.idusuarios, usuarios.nombrescompletosUsuarios, usuarios.ciudadUsuarios, comerciante.nombreestablecimientoComerciante from usuarios
+inner join comerciante on comerciante.USUARIOS_idUsuarios = usuarios.idUsuarios;
+
+/*usuario - campesino*/
+select usuarios.idusuarios, usuarios.nombrescompletosUsuarios, usuarios.ciudadUsuarios, campesino.idcampesino, campesino.tipocultivoCampesino from usuarios
+inner join campesino on campesino.USUARIOS_idUsuarios = usuarios.idUsuarios order by usuarios.idusuarios ASC;
+
+/*REPORTE DE LOS PRODUCTOS DE CADA PEDIDO*/
+select producto.nombreproducto, producto.tipoproducto, producto.valorunitarioproducto, pedido.idpedido,pedido.cantidadpedido from producto
+inner join pedido on pedido.producto_idproducto = producto.idproducto;
+
+/*REPORTE DE FACTURAS*/
+select producto.nombreproducto, producto.tipoproducto, producto.valorunitarioproducto, pedido.idpedido,pedido.cantidadpedido, factura.pagadoFactura, factura.horafactura from producto
+inner join pedido on pedido.producto_idproducto = producto.idproducto
+inner join factura on factura.pedido_idpedido= pedido.idpedido;
+
+/* REPORTE DE EL VALOR DELA OFERTA DE TRANSPORTE*/
+select usuarios.nombrescompletosusuarios, usuarios.ciudadusuarios,transportador.idtransportador,vehiculo.tipovehiculo, vehiculo.placasvehiculo, ofertatransporte.valorofinalofertaTransporte from usuarios 
+inner join transportador on transportador.usuarios_idusuarios=usuarios.idusuarios 
+inner join vehiculo on vehiculo.transportador_idtransportador= transportador.idtransportador 
+inner join ofertatransporte on ofertatransporte.transportador_idtransportador = transportador.idtransportador;
+
+/* USUARIOS CON 2 ROLES */
+select usuarios.nombrescompletosusuarios, usuarios.ciudadusuarios, usuarios.departamentousuarios, transportador.idtransportador, campesino.idcampesino from usuarios 
+inner join  transportador on transportador.usuarios_idusuarios=usuarios.idusuarios
+inner join campesino on campesino.usuarios_idusuarios=usuarios.idusuarios;
+
+/* reporte de usuarios por ciudad */
+select nombrescompletosUsuarios, direccionUsuarios, ciudadUsuarios from usuarios where ciudadUsuarios = 'bogota';
+
+/* reporte de los productos de los campesinos*/
+select usuarios.nombrescompletosUsuarios, usuarios.direccionUsuarios, usuarios.ciudadUsuarios, campesino.direccioncampesino, campesino.tipocultivoCampesino from usuarios inner join campesino on campesino.USUARIOS_idUsuarios = usuarios.idUsuarios;
+
+/* reporte de transportadores y vehiculos*/
+select usuarios.nombrescompletosUsuarios, usuarios.direccionUsuarios, usuarios.ciudadUsuarios, transportador.direccionTransportador,vehiculo.marcaVehiculo, vehiculo.tipoVehiculo, vehiculo.placasVehiculo from usuarios inner join transportador on transportador.USUARIOS_idUsuarios=usuarios.idUsuarios inner join vehiculo on vehiculo.TRANSPORTADOR_idtransportador=transportador.idTransportador;
+
+/* reporte de la compra de productos realizada por los comerciantes*/
+select usuarios.nombrescompletosUsuarios, usuarios.ciudadUsuarios, comerciante.nombreestablecimientoComerciante,ofertas.valorfinalOfertas, producto.nombreProducto, pedido.cantidadPedido from usuarios inner join comerciante on comerciante.USUARIOS_idUsuarios = usuarios.idUsuarios inner join ofertas on ofertas.COMERCIANTE_idcomprador=comerciante.idComerciante inner join producto on ofertas.producto_idproducto= producto.idproducto inner join campesino on producto.campesino_idcampesino=campesino.idCampesino inner join pedido on pedido.producto_idproducto= producto.idproducto inner join ofertatransporte on ofertatransporte.pedido_idpedido= ofertatransporte.idofertaTransporte;
